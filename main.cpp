@@ -22,6 +22,10 @@ int main() {
         cout << value;
     cout << endl;
 
+    string st(sizeof(tape)/ sizeof(tape[1]), '.');
+    st[start_poz]='|';
+    cout<<st<<endl;
+
     while (start_rule < (sizeof(rules)/ sizeof(rules[1])) )
     {
         int i;
@@ -29,13 +33,17 @@ int main() {
             if(tape[start_poz]==alph[i])break;
         }
         tape[start_poz]= rules[start_rule][i][0];
+
+        for(auto const& value : tape)
+            cout << value ;
+        cout << endl;
+        cout<<st<<endl;
+        st[start_poz]='.';
         if (rules[start_rule][i][1] == 'l') start_poz -= 1;
         else if (rules[start_rule][i][1] == 'r') start_poz += 1;
         start_rule = (int)rules[start_rule][i][2] - 48;
+        st[start_poz]='|';
 
-        for(auto const& value : tape)
-            cout << value;
-        cout << endl;
     }
 
     return 0;
