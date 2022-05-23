@@ -19,7 +19,7 @@ int main() {
             {{'0','r','1'},{'1','r','1'},{'#',0,'2'}}
             };
     for(auto const& value : tape)
-        cout << value << ";";
+        cout << value;
     cout << endl;
 
     while (start_rule < (sizeof(rules)/ sizeof(rules[1])) )
@@ -34,7 +34,7 @@ int main() {
         start_rule = (int)rules[start_rule][i][2] - 48;
 
         for(auto const& value : tape)
-            cout << value << ";";
+            cout << value;
         cout << endl;
     }
 
