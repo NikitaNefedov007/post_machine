@@ -1,6 +1,6 @@
 tape_size,8
 init_tape: (, 2, 3, 1, 2, 1, 1,)
-alph: 1,2,3
+alph: 1,2
 start_head_pos,3
 start_rule,0
 rule_set,0,0,1,-1,1
